@@ -1,6 +1,6 @@
-addpath(genpath('Functions'))
+addpath(genpath('./Functions'))
 
-D3 = importdata('Data/Keycorrect_CPAll2.csv')
+D3 = importdata('Data/Keycorrect.csv')
 Dexp = importdata('Data/NormData.csv');
 
 [DexpCS5,Arc,Xtest,OutputCS5]  = loadCS5Section_3_surf(D3,Dexp);

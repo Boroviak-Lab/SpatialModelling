@@ -1,15 +1,15 @@
 addpath(genpath('Functions/'))
 
-D3 = importdata('/Users/christopherpenfold/Desktop/Thorsten/CombinedModelling/marmoset/Keycorrect_CPAll2.csv')
-Dexp = importdata('/Users/christopherpenfold/Desktop/Thorsten/FINAL/Final_AllGoodShots_wCS6r/NormData.csv');
+D3 = importdata('Data/Keycorrect.csv')
+Dexp = importdata('Data/NormData.csv');
 
 [DexpCS5,Arc,Xtest,OutputCS5]  = loadCS5(D3,Dexp);
 [DexpCS6,Arc,Xtest,OutputCS6]  = loadCS6(D3,Dexp);
 [DexpCS7,Arc,Xtest,OutputCS7]  = loadCS7(D3,Dexp);
 
-Arc1 = importdata('EmDiscCS5_Arc.mat');
-Arc2 = importdata('EmDiscCS6_Arc.mat');
-Arc3 = importdata('EmDiscCS7_Arc.mat');
+Arc1 = importdata('Data/EmDiscCS5_Arc.mat');
+Arc2 = importdata('Data/EmDiscCS6_Arc.mat');
+Arc3 = importdata('Data/EmDiscCS7_Arc.mat');
 
 Dlist = {'POU5F1','PRDM14','T'}
 
@@ -163,8 +163,8 @@ yt = yticks;
 if length(yt)==5,yt = yt(1:2:end),set(gca,'YTick',yt); end
 set(gca,'fontsize', 8)
 
-set(gcf,'PaperUnits','inches','PaperPosition',[0 0 15.98/2 11.93/2.7])
-print(h, '-dpsc2',['~/Desktop/APAxisCS567_' Dlist{j}],'-r500','-painters')
+%set(gcf,'PaperUnits','inches','PaperPosition',[0 0 15.98/2 11.93/2.7])
+%ßprint(h, '-dpsc2',['~/Desktop/APAxisCS567_' Dlist{j}],'-r500','-painters')
 
 %set(gcf,'PaperUnits','inches','PaperPosition',[0 0 15.98/2 11.93/2.7])
 %print(h, '-dpsc2',['~/Desktop/APAxisCS567_' Dlist{j}],'-r500','-painters')
