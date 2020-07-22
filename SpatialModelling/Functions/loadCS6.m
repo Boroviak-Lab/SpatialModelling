@@ -1,7 +1,7 @@
 function [Dexp1,Arc,Xtest,Output] = loadCS6(D3,Dexp)
 
 
-fid = fopen('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/Proj_shots_BLEND_high_update.csv', 'rt'); 
+fid = fopen('Functions/SmoothSurfaces/CS6/Proj_shots_BLEND_high_update.csv', 'rt'); 
 D0_ = textscan(fid,'%f %f %f %s %s','headerLines', 1,'Delimiter',',');
 fclose(fid);
 D1.data = cell2mat(D0_(:,1:3));
@@ -10,14 +10,14 @@ D1.textdata =D0_{:,4};
 %Load in the medium quality plots
 %D0_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/E15B/Proj_shots_BLEND_high_CP.csv');
 
-D1_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/EmDisc_BLEND_points_high_final.csv');
-D2_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/EmDisc_BLEND_faces_high_final.csv');
-D3_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/Tb_BLEND_faces_high_final.csv');
-D4_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/Am_BLEND_faces_high_final.csv');
-D5_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/sys_BLEND_faces_high_final.csv'); %Trophoblast
-D6_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/ExMes_BLEND_faces_high_final.csv');
-D7_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/VE_BLEND_faces_high_final.csv');
-D8_ = importdata('/Users/christopherpenfold/Desktop/Thorsten/spacemonkey/SmoothSurfaces/CS6/PGC_BLEND_faces_high_final.csv');
+D1_ = importdata('Functions/SmoothSurfaces/CS6/EmDisc_BLEND_points_high_final.csv');
+D2_ = importdata('Functions/SmoothSurfaces/CS6/EmDisc_BLEND_faces_high_final.csv');
+D3_ = importdata('Functions/SmoothSurfaces/CS6/Tb_BLEND_faces_high_final.csv');
+D4_ = importdata('Functions/SmoothSurfaces/CS6/Am_BLEND_faces_high_final.csv');
+D5_ = importdata('Functions/SmoothSurfaces/CS6/sys_BLEND_faces_high_final.csv'); %Trophoblast
+D6_ = importdata('Functions/SmoothSurfaces/CS6/ExMes_BLEND_faces_high_final.csv');
+D7_ = importdata('Functions/SmoothSurfaces/CS6/VE_BLEND_faces_high_final.csv');
+D8_ = importdata('Functions/SmoothSurfaces/CS6/PGC_BLEND_faces_high_final.csv');
 
 
 
@@ -88,7 +88,7 @@ CellIDs4 = D3.textdata(idx+1,5);
 
 
 %Load in expression data
-Dexp = importdata('/Users/christopherpenfold/Desktop/Thorsten/FINAL/Final_AllGoodShots_wCS6r/NormData.csv');
+Dexp = importdata('Data/NormData.csv');
 genes = Dexp.textdata(2:end,1);
 headers = Dexp.textdata(1,2:end);
 headers = strrep(headers,'"','');
@@ -167,7 +167,7 @@ Output.ind5 = ind5;
 Output.ind6 = ind6;
 return
 %keyboard
-DMAP1 = importdata('/Users/christopherpenfold/Desktop/Thorsten/FINAL/CCAFigForESCs/DimRed/ESC_pi.csv')
+DMAP1 = importdata('Data/ESC_pi.csv')
 estarg = DMAP1.textdata(1,2:end);
 estarg = strrep(estarg,'"','');
 
