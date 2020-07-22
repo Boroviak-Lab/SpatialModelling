@@ -167,7 +167,6 @@ for (i in 1:length(colKey2)) {
 necols <- coluse[ind1]
 
 
-
 DimPlot(mammal.combined,  shape.by = 'cell.orig', cols = necols, pt.size = 4, reduction = "umap", split.by = "species", label = TRUE, repel = TRUE, do.return = TRUE) 
 ggsave(filename=paste(saveext,"/DimRed/UMAP_Type_Lab","_supp_4.pdf",sep=""),width = 42, height = 8)
 DimPlot(mammal.combined,  shape.by = 'cell.orig', cols = necols, pt.size = 6, reduction = "umap", split.by = "species", label = TRUE, repel = TRUE, do.return = TRUE) 
@@ -189,64 +188,6 @@ DimPlot(mammal.combined,  shape.by = 'cell.orig', cols = necols, pt.size = 10, r
 ggsave(filename=paste(saveext,"/DimRed/PCA_Type_Lab","_supp_10.pdf",sep=""),width = 42, height = 8)
 DimPlot(mammal.combined,  shape.by = 'cell.orig', cols = necols, pt.size = 12, reduction = "pca", split.by = "species", label = TRUE, repel = TRUE, do.return = TRUE) 
 ggsave(filename=paste(saveext,"/DimRed/PCA_Type_Lab","_supp_12.pdf",sep=""),width = 42, height = 8)
-
-
-
-
-#Pull out marm dataset
-split <- SplitObject(mammal.combined, split.by = "species")
-AllMarkers <- FindAllMarkers(split$`1) Marmoset`, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
-IntG <- intersect( intersect(rownames(marmoset_data), rownames(cynomolgous_data)), rownames(human_dataA) )
-
-dir.create(paste(saveext,"/EpiCS3/",sep=""))
-uGenes1 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="Epi_CS3")] )
-for (i in 1:length(uGenes1)) {
-  FeaturePlot(mammal.combined,  reduction = "pca", features = as.character(uGenes1[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/EpiCS3/Markerscatter_",as.character(uGenes1[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
-dir.create(paste(saveext,"/HypCS3/",sep=""))
-uGenes2 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="Hyp_CS3")] )
-for (i in 1:length(uGenes2)) {
-  FeaturePlot(mammal.combined,  reduction = "pca", features = as.character(uGenes2[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/HypCS3/Markerscatter_",as.character(uGenes2[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
-dir.create(paste(saveext,"/TbCS3/",sep=""))
-uGenes3 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="Tb_CS3")] )
-for (i in 1:length(uGenes3)) {
-  FeaturePlot(mammal.combined, reduction = "pca", features = as.character(uGenes3[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/TbCS3/Markerscatter_",as.character(uGenes3[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
-dir.create(paste(saveext,"/EmDisc_CS5/",sep=""))
-uGenes4 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="EmDisc_CS5")] )
-for (i in 1:length(uGenes4)) {
-  FeaturePlot(mammal.combined, reduction = "pca", features = as.character(uGenes4[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/EmDisc_CS5/Markerscatter_",as.character(uGenes4[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
-dir.create(paste(saveext,"/SYS_CS5/",sep=""))
-uGenes5 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="SYS_CS5")] )
-for (i in 1:length(uGenes5)) {
-  FeaturePlot(mammal.combined, reduction = "pca", features = as.character(uGenes5[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/SYS_CS5/Markerscatter_",as.character(uGenes5[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
-dir.create(paste(saveext,"/Tb_CS5/",sep=""))
-uGenes6 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="Tb_CS5")] )
-for (i in 1:length(uGenes6)) {
-  FeaturePlot(mammal.combined, reduction = "pca", features = as.character(uGenes6[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/Tb_CS5/Markerscatter_",as.character(uGenes6[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
-dir.create(paste(saveext,"/ExMes_CS5/",sep=""))
-uGenes7 <- intersect(IntG, AllMarkers$gene[which(AllMarkers$cluster=="ExMes_CS5")] )
-for (i in 1:length(uGenes7)) {
-  FeaturePlot(mammal.combined, reduction = "pca", features = as.character(uGenes7[i]), combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)
-  ggsave(filename=paste(saveext,"/ExMes_CS5/Markerscatter_",as.character(uGenes7[i]),".pdf",sep=""),width = 35, height = 8)
-}
-
 
 #Example plot
 FeaturePlot(mammal.combined, reduction = "pca", features = "POU5F1", combine=TRUE, cols =  c("lightgrey", "black"), split.by = "species", pt.size = 8)

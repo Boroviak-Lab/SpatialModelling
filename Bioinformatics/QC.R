@@ -6,7 +6,7 @@ library(dplyr)
 library(enrichR)
 library("tidyverse")
 library("DropletUtils")
-
+library(gtools)
 set.seed(1)
 
 #Tediously add all the folders can shortcut this later when we have finalised everything.
@@ -177,8 +177,8 @@ ggpaired(Data2, x = "Type", y = "Efficiency",
          palette = "jco")
 
 
-ggpaired(Data2, x = "t", y = "Efficiency",
-         group = "Type", color = "supp", line.color = "gray", line.size = 0.4,palette = "jco")+stat_compare_means(paired = TRUE)
+#ggpaired(Data2, x = "t", y = "Efficiency",
+#         group = "Type", color = "supp", line.color = "gray", line.size = 0.4,palette = "jco")+stat_compare_means(paired = TRUE)
 
 
 #Now generate the expression densit plots
