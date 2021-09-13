@@ -8,7 +8,7 @@ Within these files there are demos for loading in the spatial data, using GP mod
 
 1) 3D reconstruction of expression patterns from projected samples in 3D
 2) 2D reconstruction of tissues at chosen plane bisections
-3) 1D reconstructions along a given trajectory (for extracting AP gradients)
+3) 1D reconstructions along a given trajectory (for extracting AP gradients or for generating virtual 2D gastruloids)
 
 Other demo code is availble:
 
