@@ -278,7 +278,7 @@ O9.vertices(:,3) = O9.vertices(:,3) - 40;
 % 
 % %im = imread('/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/Traces/Lineage_wBG_traceOnly.png')
 % %h = imshow(im);
-% %print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/All/Lineage_wBG_ON.png'],'-r1000')
+% %print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/All/Lineage_wBG_ON.png'],'-r800')
 % %print('-dpng',['~/Desktop/Lineage_wBG_ON.png'],'-r1000')
 % 
 % clf
@@ -313,7 +313,7 @@ O9.vertices(:,3) = O9.vertices(:,3) - 40;
 % text(-200,420,{'LINEAGE'},'FontSize',22)
 % text(-300,340,{'Carnegie Stage 5'},'FontSize',22)
 % set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8*0.7308])
-% print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/CS5/Lineage_CS5_wBG.png'],'-r1000')
+% print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/CS5/Lineage_CS5_wBG.png'],'-r800')
 % %print('-dpng',['~/Desktop/Lineage_CS5_wBG.png'],'-r1000')
 % clf
 % 
@@ -349,7 +349,7 @@ O9.vertices(:,3) = O9.vertices(:,3) - 40;
 % set(gca,'Color','w')
 % %Save
 % set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8*0.6975])
-% print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/CS6/Lineage_CS6_wBG.png'],'-r1000')
+% print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/CS6/Lineage_CS6_wBG.png'],'-r800')
 % %print('-dpng',['~/Desktop/Lineage_CS6_wBG.png'],'-r1000')
 % clf
 % 
@@ -379,7 +379,7 @@ O9.vertices(:,3) = O9.vertices(:,3) - 40;
 % axis off
 % set(gca,'Color','w')
 % set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8*0.7937])
-% %print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/CS7/Lineage_CS7_wBG.png'],'-r1000')
+% %print('-dpng',['/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/Online Resource/Plots/CS7/Lineage_CS7_wBG.png'],'-r800')
 % %print('-dpng',['~/Desktop/Lineage_CS7_wBG.png'],'-r1000')
 % clf
 
@@ -478,7 +478,7 @@ set(gcf, 'InvertHardcopy', 'off')
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 12 12*0.3942])
 fig=gcf;ax=fig.CurrentAxes;fig.Color='k';fig.OuterPosition=fig.InnerPosition;
 axis off
-print('-dpng',['~/Desktop/OnlineResource/All/Lineage_bBG_OFF.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/All/Lineage_bBG_OFF.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_bBG_OFF.png'],'-r1000')
 
 text(4710,-340,{'200 um'},'FontSize',8,'Color',[1, 1 ,1])
@@ -561,7 +561,7 @@ set(gcf, 'InvertHardcopy', 'off')
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 12 12*0.3942])
 fig=gcf;ax=fig.CurrentAxes;fig.Color='k';fig.OuterPosition=fig.InnerPosition;
 axis off
-print('-dpng',['~/Desktop/OnlineResource/All/Lineage_bBG_ON.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/All/Lineage_bBG_ON.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_bBG_noborder_ON.png'],'-r1000')
 
 close all
@@ -601,7 +601,7 @@ set(gcf, 'InvertHardcopy', 'off')
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8])
 fig=gcf;ax=fig.CurrentAxes;fig.Color='k';fig.OuterPosition=fig.InnerPosition;
 axis off
-print('-dpng',['~/Desktop/OnlineResource/CS5/Lineage_CS5_bBG_OFF.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS5/Lineage_CS5_bBG_OFF.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS5_bBG_OFF.png'],'-r1000')
 text(-530,150,{'SYS'},'FontSize',12,'Color',[1, 1 ,1])
  plot(linspace(-206,-410,100),linspace(110,130,100),'w-','LineWidth',1)
@@ -648,7 +648,7 @@ set(gcf, 'InvertHardcopy', 'off')
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8])
 fig=gcf;ax=fig.CurrentAxes;fig.Color='k';fig.OuterPosition=fig.InnerPosition;
 axis off
-print('-dpng',['~/Desktop/OnlineResource/CS6/Lineage_CS6_bBG_OFF.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS6/Lineage_CS6_bBG_OFF.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS6_bBG_OFF.png'],'-r1000')
 text(900,-340,{'Tb'},'FontSize',12,'Color',[1, 1 ,1])
 plot(linspace(1135,1000,100),linspace(-220,-300,100),'w-','LineWidth',1)
@@ -669,7 +669,7 @@ plot(linspace(1657,1820,100),linspace(91,220,100),'w-','LineWidth',1)
 
 text(1300,675,{'LINEAGE'},'FontSize',22,'Color',[1, 1 ,1])
 text(1200,575,{'Carnegie Stage 6'},'fontweight','bold','FontSize',22,'Color',[1, 1 ,1])
-print('-dpng',['~/Desktop/OnlineResource/CS6/Lineage_CS6_bBG_ON.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS6/Lineage_CS6_bBG_ON.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS6_bBG_ON.png'],'-r1000')
 
 close all
@@ -719,7 +719,7 @@ plot(linspace(4673,5304,100),linspace(160,390,100),'w-','LineWidth',1)
 
 text(3700,2430,{'LINEAGE'},'FontSize',22,'Color',[1, 1 ,1])
 text(3400,2220,{'Carnegie Stage 7'},'fontweight','bold','FontSize',22,'Color',[1, 1 ,1])
-print('-dpng',['~/Desktop/OnlineResource/CS7/Lineage_CS7_bBG_ON.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS7/Lineage_CS7_bBG_ON.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS7_bBG_ON.png'],'-r1000')
 
 close all
@@ -742,7 +742,7 @@ set(gcf, 'InvertHardcopy', 'off')
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8])
 fig=gcf;ax=fig.CurrentAxes;fig.Color='k';fig.OuterPosition=fig.InnerPosition;
 axis off
-print('-dpng',['~/Desktop/OnlineResource/CS3/Lineage_CS3_OFF.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS3/Lineage_CS3_OFF.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS3_OFF.png'],'-r1000')
 hold on
 text(1300+ DeltaX,1300+ DeltaY,{'ICM'},'FontSize',22,'Color',[1, 1 ,1])
@@ -757,7 +757,7 @@ text(2100+ DeltaX,1050+ DeltaY,{'Hypoblast'},'FontSize',22,'Color',[1, 1 ,1])
 plot(linspace(1932,2090,100)+ DeltaX,linspace(1067,1065,100)+ DeltaY,'w-','LineWidth',1)
 text(1400,2050,{'LINEAGE'},'FontSize',22,'Color',[1, 1 ,1])
 text(1300,1960,{'Carnegie Stage 3'},'fontweight','bold','FontSize',22,'Color',[1, 1 ,1])
-print('-dpng',['~/Desktop/OnlineResource/CS3/Lineage_CS3_ON.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS3/Lineage_CS3_ON.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS3_ON.png'],'-r1000')
 
 close all
@@ -778,7 +778,7 @@ set(gcf, 'InvertHardcopy', 'off')
 set(gcf,'PaperUnits','inches','PaperPosition',[0 0 8 8])
 fig=gcf;ax=fig.CurrentAxes;fig.Color='k';fig.OuterPosition=fig.InnerPosition;
 axis off
-print('-dpng',['~/Desktop/OnlineResource/CS1-2/Lineage_CS1-2_bBG_OFF.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS1-2/Lineage_CS1-2_bBG_OFF.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS1_bBG_OFF.png'],'-r1000')
 hold on
 text(-460+ DeltaX,1300+ DeltaY,{'Zygote'},'FontSize',22,'Color',[1, 1 ,1])
@@ -791,7 +791,7 @@ text(700+ DeltaX,1300+ DeltaY,{'Morula'},'FontSize',22,'Color',[1, 1 ,1])
 %plot(linspace(846,906,100)+ DeltaX,linspace(1095,1220,100)+ DeltaY,'w-','LineWidth',1)
 text(120,1950,{'LINEAGE'},'FontSize',22,'Color',[1, 1 ,1])
 text(-50,1850,{'Carnegie Stages 1-2'},'fontweight','bold','FontSize',22,'Color',[1, 1 ,1])
-print('-dpng',['~/Desktop/OnlineResource/CS1-2/Lineage_CS1-2_bBG_ON.png'],'-r1000')
+print('-dpng',['~/Desktop/OnlineResource/CS1-2/Lineage_CS1-2_bBG_ON.png'],'-r800')
 %print('-dpng',['~/Desktop/Lineage_CS1_bBG_ON.png'],'-r1000')
 
 
