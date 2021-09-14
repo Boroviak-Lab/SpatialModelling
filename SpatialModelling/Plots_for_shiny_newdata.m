@@ -1,5 +1,12 @@
 addpath(genpath('./Functions'))
 
+mkdir All
+mkdir CS5
+mkdir CS6
+mkdir CS7
+mkdir CS1-2
+mkdir CS3
+
 load('MissingSections/CS5_revisions_DIAGONAL_2.mat')
 O1b = OBJ1_6;
 load('./Data/Cross sections/CS6/CS6_revisions_CROSS_246.mat')
@@ -465,8 +472,8 @@ close all
 %___________________________________________
 %Now do some GP interpolations for genes
 
-IDs= importdata('/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/NATURE REVISION/Spatial models for revisions/SpatialModelling/Data/IDs_and_locations.csv')
-Dexp = importdata('/Volumes/GoogleDrive/My Drive/Marmoset_shared_folder/NATURE REVISION/Spatial models for revisions/SpatialModelling/Data/X.csv')
+IDs= importdata('MissingSections/IDs_and_locations.csv')
+Dexp = importdata('MissingSections/X.csv')
 
 
 %list = {'SOX17','SOX2','POU5F1','T','TFAP2C','NANOG','PRDM14','LEF1','ID2','BMP4','TDGF1','NODAL','WNT3','WNT8A','TFAP2A','MIXL1','CER1','DPPA5','FBXO2','PDGFRA','PDGFA','KDR','VEGFA','DAZL','KLF4','PRAME','MAEL','WNT5A','WNT5B','WNT6','TCF4','ID1','ID3','CHRD','FST','MIXL1','GATA6','CDH2','LEFTY2','LHX1','OTX2','HHEX','SDCC4','BMP2','APOA1','GC','IHH','ARL13B','PTCH2','SMO','GPC4','GLI1'}
@@ -480,10 +487,10 @@ Lind6 = find(strcmp(IDs.textdata(2:end,4),'Epi_CS3')==1  );
 Lind7 = find(strcmp(IDs.textdata(2:end,4),'Tb_CS3')==1 );
 Lind8 = find(strcmp(IDs.textdata(2:end,4),'Hyp_CS3')==1  );
 
-load(['~/Desktop/Hyp1_batch1.mat']);
-hcs6=load(['~/Desktop/CS6_Hyp1_batch1.mat']);
+load(['MissingSections/Hyp1_batch1.mat']);
+hcs6=load(['MissingSections/CS6_Hyp1_batch1.mat']);
 Hyp3 = hcs6.Hyp1;
-hcs7=load(['~/Desktop/CS7_Hyp1_batch1.mat']);
+hcs7=load(['MissingSections/CS7_Hyp1_batch1.mat']);
 Hyp5 = hcs7.Hyp1;
 list = find(strcmp(Dexp.textdata(2:end,1),'SOX2')==1);
 genelist = Dexp.textdata(2:end,1);
@@ -519,15 +526,10 @@ list = find(strcmp(Dexp.textdata(2:end,1),genelist2{i})==1);
 [OutputCS5] = MarmosetGPInfer_CS5Opt(OutputCS5,O1b,list,D,Hyp1(list,:),Hyp1(list,:));
 [OutputCS6] = MarmosetGPInfer_CS6_v3Opt(OutputCS6,O2b,list,D,Hyp3(list,:),Hyp3(list,:));
 [OutputCS7] = MarmosetGPInfer_CS7_v3Opt(OutputCS7,O3b,list,D,Hyp5(list,:),Hyp5(list,:));       
-            
-%[Output1] = Marmoset3D_CS5_surface(DexpCS5,OutputCS5,'Base2',list{i});
-%[Output2] = Marmoset3D_CS6_surface(DexpCS6,OutputCS6,'Base2',list{i});
-%[Output3] = Marmoset3D_CS7_surface(DexpCS7,OutputCS7,'Base2',list{i});
+     
 
 minV = min([min(OutputCS5.cLim),min(OutputCS6.cLim),min(OutputCS7.cLim)]);
 maxV = max([max(OutputCS5.cLim),max(OutputCS6.cLim),max(OutputCS7.cLim)]);
-%maxV = max([Output1.m_0;Output1.m_1;Output1.m_2;Output1.m_3;Output1.m_4;Output1.m_5;   Output2.m_0;Output2.m_1;Output2.m_2; Output2.m_3; Output2.m_4;Output2.m_5;Output2.m_6;    Output3.m_0;Output3.m_1;Output3.m_2;Output3.m_3;Output3.m_5]);
-%minV = min([Output1.m_0;Output1.m_1;Output1.m_2;Output1.m_3;Output1.m_4;Output1.m_5;   Output2.m_0;Output2.m_1;Output2.m_2; Output2.m_3; Output2.m_4;Output2.m_5;Output2.m_6;    Output3.m_0;Output3.m_1;Output3.m_2;Output3.m_3;Output3.m_5]);
 
 M1 = mean(Dexp.data(list,Lind1));
 M2 = mean(Dexp.data(list,Lind2));
