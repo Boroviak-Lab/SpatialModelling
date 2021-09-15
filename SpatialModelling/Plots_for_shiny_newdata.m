@@ -464,7 +464,7 @@ text(700+ DeltaX,1300+ DeltaY,{'Morula'},'FontSize',22,'Color',[1, 1 ,1])
 %plot(linspace(846,906,100)+ DeltaX,linspace(1095,1220,100)+ DeltaY,'w-','LineWidth',1)
 text(120,1950,{'LINEAGE'},'FontSize',22,'Color',[1, 1 ,1])
 text(-50,1850,{'Carnegie Stages 1-2'},'fontweight','bold','FontSize',22,'Color',[1, 1 ,1])
-print('-dpng',['~/Desktop/OnlineResource/CS1-2/Lineage_CS1-2_bBG_ON.png'],'-r800')
+print('-dpng',['./CS1-2/Lineage_CS1-2_bBG_ON.png'],'-r800')
 
 
 close all
