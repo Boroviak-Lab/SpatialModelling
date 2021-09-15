@@ -3,7 +3,7 @@ function [OBJ2A,sections] = LoadCS6(sections)
 %237,243,246,252,,
 if strcmp(sections,'3D')==1
 
-load('../Data/SpatialData/CS6_w_CutExMes4.mat')
+load('./Data/SpatialData/CS6_w_CutExMes4.mat')
 %1-exmes, 7
 %7-exmes bottom, 12
 %13 - emdisc,16
@@ -56,7 +56,7 @@ OBJ2A.objects(32).data.vertices = [temp.objects(2).data.vertices;temp.objects(4)
 
 elseif strcmp(sections,'237')==1 %Partial 
 %load('./Data/CS6_embryomodel_260421_HIGHRES.mat')
-load('../Data/SpatialData/Cross sections/CS6/CS6_revisions_CROSS_237.mat')
+load('./Data/SpatialData/Cross Sections/CS6/CS6_revisions_CROSS_237.mat')
 OBJ2A = OBJ2A_1;
 OBJ2A.objects([1,13,17,21,25,29]) = OBJ2A_1.objects([1,5,9,13,17,21]);
 OBJ2A.objects([4,16,20,24,28,32]) = OBJ2A_1.objects([4,8,12,16,20,24]); %Issue 'cos we missing 8 and 12
@@ -66,7 +66,7 @@ OBJ2A.objects(12).data.normal = []
 OBJ2A.objects(8).data.vertices = [];
 OBJ2A.objects(8).data.normal = [];
 elseif strcmp(sections,'243')==1
-load('../Data/SpatialData/Cross sections/CS6/CS6_revisions_CROSS_243.mat')
+load('./Data/SpatialData/Cross Sections/CS6/CS6_revisions_CROSS_243.mat')
 OBJ2A = OBJ2A_1;
 OBJ2A.objects([1,5,9,13,17,21,25,29]) = OBJ2A_1.objects([1,5,17,11,15,19,27,31]);
 OBJ2A.objects([4,8,12,16,20,24,28,32]) = OBJ2A_1.objects([4,10,22,14,18,22,30,34]);
@@ -74,7 +74,7 @@ OBJ2A.objects([4,8,12,16,20,24,28,32]) = OBJ2A_1.objects([4,10,22,14,18,22,30,34
 elseif strcmp(sections,'246')==1
     
 %keyboard
-load('../Data/SpatialData/Cross sections/CS6/CS6_revisions_CROSS_246_PGCfix.mat')
+load('./Data/SpatialData/Cross Sections/CS6/CS6_revisions_CROSS_246_PGCfix.mat')
 %load('./Data/Cross sections/CS6/CS6_revisions_CROSS_246.mat')
 OBJ2A = OBJ2A_1;
 %1=emd,4
@@ -121,7 +121,7 @@ OBJ2A.objects([17,20,1,4,5,8,21,24,13,16,9,12,25,28,29,32]) = OBJ2A.objects([13,
 %OBJ2A.objects([17,1,5,21,13,9,25,29,20,4,8,24,16,12,28,32]) = OBJ2A_1.objects([15,1,5,19,11,23,27,31,18,4,10,22,14,26,30,34]);
 %OBJ2A.objects([8,12,16,20,24,28,32]) = OBJ2A_1.objects([10,22,14,18,22,30,34]);
 elseif strcmp(sections,'252')==1
-load('../Data/SpatialData/Cross sections/CS6/CS6_revisions_CROSS_252.mat')
+load('./Data/SpatialData/Cross Sections/CS6/CS6_revisions_CROSS_252.mat')
 OBJ2A = OBJ2A_1;
 %No PGC
 OBJ2A.objects(5)  = [];
@@ -129,7 +129,7 @@ OBJ2A.objects(8)  = [];
 OBJ2A.objects([1,9,13,17,21,25,29]) = OBJ2A_1.objects([1,17,5,9,13,21,25]);
 OBJ2A.objects([4,12,16,20,24,28,32]) = OBJ2A_1.objects([4,20,8,12,16,24,28]);
 else
-load('../Data/SpatialData/CS6_embryomodel_260421_HIGHRES.mat')
+load('./Data/SpatialData/CS6_embryomodel_260421_HIGHRES.mat')
 end
 %EMD,1 ; PGC, 5; SYS 9; VE 13; Am 17; Stalk 21; Tb 25; Exmes 29
 %EmD  1 ; VE 5 . ;Am  9; Stalk 13; Tb 17; ExMes 21  d
