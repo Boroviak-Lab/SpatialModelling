@@ -6,7 +6,7 @@ The contents of this repository contain code for redoing analyses of Bergmann et
 
 This folder contains code used to process the data, as well as various code for loading and analysnig the data, producing plots etc. 
 
-2) A custom MATLAB package for loading andd interogating the spatial data in the `SpatialModelling' foolder.
+2) A custom MATLAB package for loading and interogating the spatial data in the `SpatialModelling' folder.
 
 This is code for loading in and visualising gene expression in 1D/2D/3D, as well as projecting other sources of data on to the embryos.
 
