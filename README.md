@@ -1,5 +1,7 @@
 # SpatialModelling folder
 
+Important: the web viewer for the data is temporarily available here: http://131.111.33.80:3838/marmoset3D/
+
 The contents of this repository contain code for redoing analyses of Bergmann et al. The code is split into two parts:
 
 1) Bioinformatics analyses (primarily in R) in the `Bioinformatics' folder
