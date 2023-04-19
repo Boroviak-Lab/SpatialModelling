@@ -12,4 +12,4 @@ This folder contains code used to process the data, as well as various code for 
 
 This is code for loading in and visualising gene expression in 1D/2D/3D, as well as projecting other sources of data on to the embryos.
 
-To run these datasets processed data can be downloaded from XXXX or by running the shell script in the Data folder and unzipping the contents. 
+To run these datasets processed data can be downloaded from ArrayExpress or by downloading the processed data linked in the Data folder and unzipping the contents. 
